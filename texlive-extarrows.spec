@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/extarrows
+# catalog-date 2008-05-15 16:08:02 +0200
+# catalog-license lgpl
+# catalog-version 1.0b
 Name:		texlive-extarrows
 Version:	1.0b
 Release:	1
@@ -42,6 +48,7 @@ of the AMSMath package: \xlongequal, \xLongleftarrow,
 %doc %{_texmfdistdir}/doc/latex/extarrows/README
 %doc %{_texmfdistdir}/doc/latex/extarrows/extarrows-test.pdf
 %doc %{_texmfdistdir}/doc/latex/extarrows/extarrows-test.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -52,3 +59,5 @@ of the AMSMath package: \xlongequal, \xLongleftarrow,
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

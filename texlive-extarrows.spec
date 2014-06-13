@@ -6,7 +6,7 @@
 # catalog-version 1.0b
 Name:		texlive-extarrows
 Version:	1.0b
-Release:	6
+Release:	7
 Summary:	Extra Arrows beyond those provided in AMSmath
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/extarrows

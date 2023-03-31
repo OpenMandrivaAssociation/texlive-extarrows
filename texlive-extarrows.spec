@@ -1,6 +1,6 @@
 Name:		texlive-extarrows
 Version:	54400
-Release:	1
+Release:	2
 Summary:	Extra Arrows beyond those provided in AMSmath
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/extarrows

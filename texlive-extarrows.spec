@@ -3,7 +3,7 @@ Version:	54400
 Release:	2
 Summary:	Extra Arrows beyond those provided in AMSmath
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/extarrows
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/extarrows
 License:	LGPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extarrows.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extarrows.doc.r%{version}.tar.xz

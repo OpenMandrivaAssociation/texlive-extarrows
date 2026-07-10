@@ -1,43 +1,25 @@
-Name:		texlive-extarrows
-Version:	54400
-Release:	2
-Summary:	Extra Arrows beyond those provided in AMSmath
+%global tl_name extarrows
+%global tl_revision 78315
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.2.0
+Release:	%{tl_revision}.1
+Summary:	Extra Arrows beyond those provided in amsmath
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/extarrows
-License:	LGPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extarrows.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extarrows.doc.r%{version}.tar.xz
+License:	lgpl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/extarrows.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/extarrows.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Arrows are provided to supplement \xleftarrow and \xrightarrow
-of the AMSMath package: \xlongequal, \xLongleftarrow,
-\xLongrightarrow, \xLongleftrightarrow, \xLeftrightarrow.
-\xlongleftrightarrow, \xleftrightarrow, \xlongleftarrow and
-\xlongrightarrow.
+Arrows are provided to supplement \xleftarrow and \xrightarrow of the
+amsath package: \xlongequal, \xLongleftarrow, \xLongrightarrow,
+\xLongleftrightarrow, \xLeftrightarrow. \xlongleftrightarrow,
+\xleftrightarrow, \xlongleftarrow and \xlongrightarrow.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/extarrows
-%doc %{_texmfdistdir}/doc/latex/extarrows
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
